@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">Add Contact Details</h2>
+        <form method="POST" action="{{ url_for('contact_form') }}">
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="mobile" name="mobile" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="reg_number" class="form-label">Registration Number</label>
+                <input type="text" class="form-control" id="reg_number" name="reg_number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
