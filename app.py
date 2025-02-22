@@ -4,6 +4,8 @@ from flask_mail import Mail, Message
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
+from models import User, Contact
+from werkzeug.security import generate_password_hash, check_password_hash
 
 load_dotenv()
 
@@ -148,3 +150,7 @@ def search():
         contact = contacts_collection.find_one({'reg_number': reg_number})
         return render_template('search_results.html', contact=contact)
     return render_template('search.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5050)
