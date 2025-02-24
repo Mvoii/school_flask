@@ -8,4 +8,4 @@ source venv/bin/activate  # Linux/Mac
 # venv\Scripts\activate.bat  # Windows
 
 # Install required packages
-pip install flask pymongo flask-login flask-mail python-dotemail
+pip install flask pymongo flask-login flask-mail python-dotenv
